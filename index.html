@@ -1,505 +1,187 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Khalil - Data & Big Data Student | Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfolio de Mohamed Khalil - Étudiant en Master Big Data & Data Science, Développeur Full Stack">
+    <meta name="keywords" content="Big Data, Data Science, Java, Python, Spring Boot, Machine Learning, Portfolio">
+    <meta name="author" content="Mohamed Khalil">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mohamed Khalil - Data Scientist & Software Engineer">
+    <meta property="og:description" content="Portfolio professionnel - Master Big Data & Data Science">
+    <meta property="og:url" content="https://medkhalil05.github.io/personal-portfolio">
+    
+    <title>Mohamed Khalil - Data Scientist & Software Engineer</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">MK</a>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">À propos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Compétences</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projets</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Formation</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="logo">MK</a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#portfolio" class="nav-link">Projets</a></li>
+                <li><a href="#education" class="nav-link">Formation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
+    <section id="home" class="hero section">
+        <div class="container">
+            <div class="hero-content reveal">
                 <h1 class="hero-title">
-                    <span class="hero-name">Mohamed Khalil</span>
-                    <span class="hero-subtitle">Data & Big Data Student | Software Engineer</span>
+                    Salut, je suis <span style="background: linear-gradient(135deg, #6366f1, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Mohamed Khalil</span>
                 </h1>
+                <p class="hero-subtitle">Data Scientist & Software Engineer</p>
                 <p class="hero-description">
-                    Passionné par les données et l'ingénierie logicielle, je conçois des solutions innovantes 
-                    pour transformer les défis data en opportunités business.
+                    Étudiant passionné en Master Big Data & Data Science, je transforme les données en insights exploitables 
+                    et développe des solutions logicielles innovantes pour résoudre les défis business de demain.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <div class="btn-group">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Découvrir mes projets
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Me contacter
+                    </a>
                     <a href="#" class="btn btn-secondary" onclick="downloadCV()">
-                        <i class="fas fa-download"></i> Télécharger CV
+                        <i class="fas fa-download"></i>
+                        Télécharger CV
                     </a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-avatar">
-                    <div class="avatar-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
+            
+            <!-- Floating Animation Elements -->
+            <div class="floating-elements" aria-hidden="true">
+                <div class="floating-item animate-float" style="animation-delay: 0s;">
+                    <i class="fab fa-python"></i>
                 </div>
-                <div class="floating-icons">
-                    <div class="icon-item" style="--delay: 0s">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="icon-item" style="--delay: 0.5s">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="icon-item" style="--delay: 1s">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <div class="icon-item" style="--delay: 1.5s">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
+                <div class="floating-item animate-float" style="animation-delay: 0.5s;">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="floating-item animate-float" style="animation-delay: 1s;">
+                    <i class="fab fa-docker"></i>
+                </div>
+                <div class="floating-item animate-float" style="animation-delay: 1.5s;">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="floating-item animate-float" style="animation-delay: 2s;">
+                    <i class="fab fa-react"></i>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">À propos</h2>
-                <p class="section-subtitle">Découvrez mon parcours et mes motivations</p>
+            <div class="section-header text-center reveal">
+                <h2>À propos de moi</h2>
+                <p>Découvrez mon parcours et mes motivations</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        Étudiant en <strong>Master Big Data & Data Science</strong> avec une solide formation en informatique 
-                        et bases de données. Fort d'une expérience en développement web et ingénierie logicielle, 
-                        je me spécialise dans la conception de solutions data-driven robustes et scalables.
+            
+            <div class="about-grid">
+                <div class="about-content reveal slide-left">
+                    <h3>Mon parcours</h3>
+                    <p>
+                        Actuellement en <strong>Master Big Data & Data Science</strong>, je possède une solide formation 
+                        en informatique avec une spécialisation en bases de données. Mon parcours m'a permis de développer 
+                        une expertise technique polyvalente alliant théorie académique et pratique professionnelle.
                     </p>
-                    <p class="about-description">
-                        Passionné par les <strong>systèmes distribués</strong>, le <strong>data engineering</strong> 
-                        et le développement d'applications backend performantes, je recherche des opportunités 
-                        pour mettre en pratique mes compétences techniques dans des projets innovants.
+                    <p>
+                        Passionné par l'intersection entre les données et la technologie, je me spécialise dans la conception 
+                        d'architectures de données robustes, le développement d'applications web modernes et l'implémentation 
+                        de solutions d'intelligence artificielle.
                     </p>
-                    <div class="about-highlights">
+                    
+                    <div class="highlights">
                         <div class="highlight-item">
                             <i class="fas fa-graduation-cap"></i>
-                            <span>Master Big Data & Data Science</span>
+                            <span>Master Big Data & Data Science en cours</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-database"></i>
+                            <span>Licence spécialisée en Bases de Données</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-code"></i>
-                            <span>Développement Full Stack</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-server"></i>
-                            <span>Systèmes Distribués</span>
+                            <span>Expérience en développement Full Stack</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-cloud"></i>
-                            <span>DevOps & Cloud</span>
+                            <span>Compétences en DevOps et Cloud</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Années d'études spécialisées</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Technologies maîtrisées</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4+</div>
-                        <div class="stat-label">Projets réalisés</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Compétences</h2>
-                <p class="section-subtitle">Technologies et outils que je maîtrise</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Langages de Programmation</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="90"></div>
-                            </div>
+                
+                <div class="stats-container reveal slide-right">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Années d'études</div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="85"></div>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Technologies maîtrisées</div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SQL</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="88"></div>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="8">0</div>
+                            <div class="stat-label">Projets réalisés</div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="80"></div>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="1">0</div>
+                            <div class="stat-label">Stage professionnel</div>
                         </div>
                     </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Backend & APIs</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Spring Boot</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JEE</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">REST API</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JWT Security</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="75"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Data & Big Data</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Apache Kafka</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="82"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Spark/Flink</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="78"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">NoSQL</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Machine Learning</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="75"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-cloud"></i>
-                        <h3>DevOps & Cloud</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Docker</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Kubernetes</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Jenkins CI/CD</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Linux</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="80"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-palette"></i>
-                        <h3>Frontend</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">HTML/CSS</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Bootstrap</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Angular</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Thymeleaf</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" data-level="80"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Projets</h2>
-                <p class="section-subtitle">Découvrez mes réalisations techniques</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Système de Gestion de Bibliothèques</h3>
-                        <p class="project-description">
-                            Application web complète développée en JEE pour la gestion des emprunts, 
-                            utilisateurs et catalogue de livres avec interface administrateur.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JEE</span>
-                            <span class="tech-tag">JSP/Servlet</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bootstrap</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Gestion de Résidences Étudiantes</h3>
-                        <p class="project-description">
-                            API REST sécurisée avec Spring Boot pour la gestion des réservations, 
-                            paiements et services de résidences universitaires.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Angular</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-stream"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Pipeline Big Data avec Kafka & Flink</h3>
-                        <p class="project-description">
-                            Architecture de streaming en temps réel pour le traitement de données massives 
-                            avec ingestion Kafka et analyse Flink. 
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Apache Kafka</span>
-                            <span class="tech-tag">Apache Flink</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-chart-bar"></i> Dashboard
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Prédiction d'Éligibilité Bancaire ML</h3>
-                        <p class="project-description">
-                            Modèle de machine learning pour prédire l'éligibilité aux prêts bancaires 
-                            avec interface web et API de prédiction.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Pandas</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-play"></i> Test
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Experience Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Formation & Expérience</h2>
-                <p class="section-subtitle">Mon parcours académique et professionnel</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 - 2025</div>
-                        <h3 class="timeline-title">Master Big Data & Data Science</h3>
-                        <p class="timeline-description">
-                            Formation spécialisée en sciences des données, systèmes distribués et intelligence artificielle.  
-                            Projets pratiques sur Hadoop, Spark, Kafka et machine learning. 
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">Big Data</span>
-                            <span class="skill-badge">Machine Learning</span>
-                            <span class="skill-badge">Spark/Flink</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024</div>
-                        <h3 class="timeline-title">Stage PFE - Développeur Full Stack</h3>
-                        <p class="timeline-description">
-                            Conception et développement d'une application web complète :  architecture backend, 
-                            gestion de base de données, sécurisation avec JWT et interface utilisateur moderne.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">Spring Boot</span>
-                            <span class="skill-badge">Angular</span>
-                            <span class="skill-badge">PostgreSQL</span>
-                            <span class="skill-badge">JWT</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021 - 2023</div>
-                        <h3 class="timeline-title">Licence Sciences Mathématiques et Informatique</h3>
-                        <p class="timeline-subtitle">Spécialité :  Bases de Données</p>
-                        <p class="timeline-description">
-                            Formation fondamentale en informatique avec spécialisation en systèmes de gestion 
-                            de bases de données, algorithmes et structures de données.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">SQL</span>
-                            <span class="skill-badge">Java</span>
-                            <span class="skill-badge">Algorithmes</span>
+                    
+                    <div class="interests">
+                        <h4>Centres d'intérêt</h4>
+                        <div class="interest-tags">
+                            <span class="interest-tag">Machine Learning</span>
+                            <span class="interest-tag">Big Data Analytics</span>
+                            <span class="interest-tag">Microservices</span>
+                            <span class="interest-tag">Cloud Computing</span>
+                            <span class="interest-tag">DevOps</span>
+                            <span class="interest-tag">Data Visualization</span>
                         </div>
                     </div>
                 </div>
@@ -508,69 +190,98 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contact</h2>
-                <p class="section-subtitle">Restons en contact pour discuter d'opportunités</p>
+            <div class="section-header text-center reveal">
+                <h2>Contactez-moi</h2>
+                <p>Discutons de vos projets et opportunités</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Parlons de vos projets</h3>
+            
+            <div class="contact-grid">
+                <div class="contact-info reveal slide-left">
+                    <h3>Restons en Contact</h3>
                     <p>
-                        Je suis ouvert aux opportunités de stage, PFE et postes junior en Data Engineering, 
-                        Software Engineering, Full Stack et DevOps. 
+                        Je suis actuellement à la recherche d'opportunités de stage, PFE ou postes junior 
+                        en Data Engineering, Software Engineering, Full Stack et DevOps. 
+                        N'hésitez pas à me contacter pour discuter de vos projets !
                     </p>
+                    
                     <div class="contact-methods">
-                        <a href="mailto:mohamed.khalil@email.com" class="contact-method">
-                            <div class="method-icon">
+                        <div class="contact-item">
+                            <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="method-info">
-                                <span class="method-label">Email</span>
-                                <span class="method-value">mohamed.khalil@email.com</span>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>mohamed.khalil@email.com</p>
                             </div>
-                        </a>
-                        <a href="https://linkedin.com/in/mohamed-khalil" class="contact-method" target="_blank">
-                            <div class="method-icon">
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
                                 <i class="fab fa-linkedin"></i>
                             </div>
-                            <div class="method-info">
-                                <span class="method-label">LinkedIn</span>
-                                <span class="method-value">mohamed-khalil</span>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>mohamed-khalil-data</p>
                             </div>
-                        </a>
-                        <a href="https://github.com/medkhalil05" class="contact-method" target="_blank">
-                            <div class="method-icon">
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
                                 <i class="fab fa-github"></i>
                             </div>
-                            <div class="method-info">
-                                <span class="method-label">GitHub</span>
-                                <span class="method-value">medkhalil05</span>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p>medkhalil05</p>
                             </div>
-                        </a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Localisation</h4>
+                                <p>Disponible pour mobilité</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
+                
+                <div class="contact-form-container reveal slide-right">
+                    <form class="contact-form" id="contact-form">
                         <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name" class="form-label">Nom complet *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="subject">Sujet</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject" class="form-label">Sujet *</label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Sélectionner un sujet</option>
+                                <option value="stage">Opportunité de stage</option>
+                                <option value="pfe">Projet de fin d'études</option>
+                                <option value="emploi">Opportunité d'emploi</option>
+                                <option value="collaboration">Collaboration projet</option>
+                                <option value="autre">Autre</option>
+                            </select>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" 
+                                      placeholder="Décrivez votre projet ou opportunité..." required></textarea>
                         </div>
+                        
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
                         </button>
                     </form>
                 </div>
@@ -584,15 +295,18 @@
             <div class="footer-content">
                 <div class="footer-text">
                     <p>&copy; 2024 Mohamed Khalil. Tous droits réservés.</p>
+                    <p>Développé avec ❤️ et beaucoup de café ☕</p>
                 </div>
-                <div class="footer-social">
-                    <a href="https://linkedin.com/in/mohamed-khalil" target="_blank" class="social-link">
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/mohamed-khalil-data" target="_blank" rel="noopener noreferrer" 
+                       class="social-link" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/medkhalil05" target="_blank" class="social-link">
+                    <a href="https://github.com/medkhalil05" target="_blank" rel="noopener noreferrer" 
+                       class="social-link" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:mohamed.khalil@email.com" class="social-link">
+                    <a href="mailto:mohamed.khalil@email.com" class="social-link" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -600,6 +314,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
